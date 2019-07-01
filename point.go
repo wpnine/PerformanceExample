@@ -18,7 +18,8 @@ func GetData() []int {
 	return testData
 }
 
-//创建一个2000000000大小的整型切片
+//创建一个6000000000大小的整型切片，大概需要占用22G的进程虚拟空间。
+//注：如果是32位系统的话需要将值改小，32操作系统的虚拟空间最大只有4G
 func CreateTestData()[]int  {
 	data := make([]int,6000000000)
 	for index,_ := range data{
